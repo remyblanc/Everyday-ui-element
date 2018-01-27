@@ -10,7 +10,7 @@ import theme from "../../lib/theme";
 const BasicMenuBtn = (props) => {
   return (
     <div
-      className={`${props.className} hamburger-icon`}
+      className={`${props.className} hamburger-icon ${props.store.basicReducer.showMenu ? 'active-hamburger' : null}`}
       onClick={() => props.toggleMenu()}>
       <div className="hamburger-line" />
       <div className="hamburger-line" />
@@ -25,14 +25,14 @@ const MenuBtn = styled(BasicMenuBtn)`
   z-index: 99;
   margin: 20px;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.5s;
   
   .hamburger-line {
     background: #ffffff;
     width: 26px;
     height: 4px;
     margin-bottom: 5px;
-    transition: 0.3s;
+    transition: 0.5s;
   }
    
   &:hover .hamburger-line:nth-child(1) {
