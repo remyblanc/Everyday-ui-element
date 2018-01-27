@@ -39,21 +39,5 @@ module.exports = {
   devtool: 'cheap-eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json', '*']
-  },
-  devServer: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        secure: false
-      },
-      '/login': {
-        target: 'http://localhost:5000',
-        secure: false
-      },
-      '/register': {
-        target: 'http://localhost:5000',
-        secure: false
-      }
-    }
   }
 };
